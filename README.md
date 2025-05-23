@@ -96,7 +96,7 @@ Step14. click on debug and simulate using simulation as shown below
   
 
 ## STM 32 CUBE PROGRAM :
-'''
+```
 #include "main.h"
 
 
@@ -239,43 +239,82 @@ void assert_failed(uint8_t *file, uint32_t line)
 }
 #endif
 
-'''
+
+```
 
 
 
 
 ## Output screen shots of proteus  :
+![image](https://github.com/user-attachments/assets/fe5935a6-a531-4811-8d53-ef8ce1b08ef5)
+
  
- 
- ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
+## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
+![image](https://github.com/user-attachments/assets/abd01ccc-2be6-4b4d-866e-fb90e0b6e70f)
  
 
 ## DUTY CYCLE AND FREQUENCY CALCULATION 
-FOR PULSE AT 500
 
-TON = 
-TOFF=
-TOTAL TIME = 
+![image](https://github.com/user-attachments/assets/af0e010e-758f-4d26-a6ce-c9466182d350)
+
+```
+TON = 3 x 10 x 10^-6
+    = 0.00003
+TOFF=0.00003
+TOTAL TIME = TON + TOFF
+           = 0.00003+0.00003 
+           = 0.00006
+FREQUENCY = 1/(TOTAL TIME) 
+          =1/0.00006 
+          = 16666.7
+DUTY CYCLE = TON /(TON+TOFF)
+           = 0.00003/0.00006
+           = 0.5
+      IN % =0.5*100 
+           = 50 %
+```
+
+![image](https://github.com/user-attachments/assets/3a401d6b-7849-421a-b1f7-ca489800fe11)
+
+```
+TON = 4 x 10 x 10^-6
+    = 0.00004
+TOFF= 2 x 10 x 10^-6
+    = 0.00002
+TOTAL TIME = TON + TOFF
+           = 0.00004+0.00002
+           = 0.00006
 FREQUENCY = 1/(TOTAL TIME)
+          = 16666.7
+DUTY CYCLE = TON /(TON+TOFF)
+           = 0.00004/0.00006
+           = 0.7
+      IN % =0.7*100 
+           = 70 %
+```
 
-FOR PULSE AT 700
+![image](https://github.com/user-attachments/assets/aa29e670-19a7-4185-a1ea-ffbf7cd2c5a6)
 
-TON = 
-TOFF=
-TOTAL TIME = 
+```
+TON = 1 x 50 x 10^-6
+    = 0.00005
+TOFF= 0.1 x 50 x 10^-6
+    = 0.000005
+TOTAL TIME = TON + TOFF
+           = 0.00005 + 0.000005
+           = 0.000055
 FREQUENCY = 1/(TOTAL TIME)
-
-
-FOR PULSE AT 900
-
-TON = 
-TOFF=
-TOTAL TIME = 
-FREQUENCY = 1/(TOTAL TIME)
-
+          = 18181.82
+DUTY CYCLE = TON /(TON+TOFF)
+           = 0.00005/0.000055
+           = 0.9
+      IN % =0.9*100 
+           = 90 %
+```
 
 ## Result :
 A PWM Signal is generated using the following frequency and various duty cycles are simulated 
+
 
 
 
